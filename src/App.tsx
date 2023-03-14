@@ -1,19 +1,12 @@
 import React from 'react';
+import { RouterProvider } from 'react-router-dom';
 import './App.css';
+import router from './router/app-router';
 
 function App() {
   return (
     <div className="App">
-      <img
-        src="/assets/estora-modular.gif"
-        alt="Gif estora modular"
-        className="App-logo"
-      />
-      <img src="/assets/estora-logo.svg" alt="logo estora" />
-      <h2 className="Wip">
-        Estamos trabajando duro para que pronto puedas crear tu propia alfombra
-        Modular
-      </h2>
+      <RouterProvider router={router} />
     </div>
   );
 }
