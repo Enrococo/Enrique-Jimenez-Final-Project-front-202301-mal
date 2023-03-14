@@ -1,6 +1,5 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { useAppDispatch, useAppSelector } from './hooks';
-import type { RootState } from './store';
+import { useDispatch } from 'react-redux';
+import { useAppDispatch } from './hooks';
 
 // Mocking react-redux hooks
 jest.mock('react-redux', () => ({
