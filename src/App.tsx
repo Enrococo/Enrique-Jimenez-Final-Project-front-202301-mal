@@ -5,11 +5,11 @@ function App() {
   return (
     <div className="App">
       <img
-        src="/assets/estora-modular.gif"
+        src="/assets/images/estora-modular.gif"
         alt="Gif estora modular"
         className="App-logo"
       />
-      <img src="/assets/estora-logo.svg" alt="logo estora" />
+      <img src="/assets/images/estora-logo.svg" alt="logo estora" />
       <h2 className="Wip">
         Estamos trabajando duro para que pronto puedas crear tu propia alfombra
         Modular
