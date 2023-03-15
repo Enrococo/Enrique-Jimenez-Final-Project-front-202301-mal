@@ -1,6 +1,10 @@
 import { LoginStyled } from './LoginStyled';
+import { useAppDispatch, useAppSelector } from '../../app/hooks';
+import { postNewLogin, selectLogin } from './loginSlice';
 
 export const Login = () => {
+  const token = useAppSelector(selectLogin);
+  const dispatch = useAppDispatch();
   return (
     <>
       <LoginStyled
@@ -8,10 +12,7 @@ export const Login = () => {
         className="login__form"
         onSubmit={(e) => {
           e.preventDefault();
-          const newLogin = {
-            email: e.currentTarget.email.value,
-            password: e.currentTarget.password.value,
-          };
+          dispatch(postNewLogin(e.currentTarget));
         }}
       >
         <h3>Accede a tu perfil</h3>
