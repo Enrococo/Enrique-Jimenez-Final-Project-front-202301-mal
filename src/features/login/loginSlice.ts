@@ -43,7 +43,6 @@ export const loginSlice = createSlice({
 
       .addCase(postNewLogin.rejected, (state, action) => {
         state.status = APIStatus.ERROR;
-        state.statusCode = action.error.code;
       });
   },
 });

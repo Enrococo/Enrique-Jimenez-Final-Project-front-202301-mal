@@ -1,9 +1,9 @@
-export interface LoginModel {
+export type LoginModel = {
   email: string;
   password: string;
-}
+};
 
 export interface LoginState {
-  token: string;
-  status: 'idle' | 'loading' | 'failed';
+  statusCode: number;
+  status: 'idle' | 'loading' | 'failed' | 'success';
 }
