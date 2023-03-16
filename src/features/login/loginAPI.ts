@@ -12,7 +12,5 @@ export const postLogin = async (login: LoginModel) => {
     }
   );
 
-  const userToken = await response.json();
-
-  return userToken;
+  return response;
 };
