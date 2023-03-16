@@ -4,8 +4,9 @@ export const LayoutStyled = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 10px;
+  padding: 10px 0px;
   display: flex;
+  gap: 10px;
   align-items: center;
 
   .layout__footer {
