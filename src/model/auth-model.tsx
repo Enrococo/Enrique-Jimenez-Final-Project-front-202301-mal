@@ -3,7 +3,7 @@ export type LoginModel = {
   password: string;
 };
 
-export type AuthStatus = 'idle' | 'error' | 'success';
+export type AuthStatus = 'idle' | 'error' | 'success' | '';
 
 export interface AuthFormState {
   registerState: AuthStatus;

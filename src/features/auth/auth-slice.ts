@@ -11,8 +11,8 @@ import { postUser } from './register/register-api';
 import { postLogin } from './login/loginAPI';
 
 const initialState: AuthFormState = {
-  registerState: 'idle',
-  loginState: 'idle',
+  registerState: '',
+  loginState: '',
   status: 'idle',
   registerMsg: '',
   loginMsg: '',
