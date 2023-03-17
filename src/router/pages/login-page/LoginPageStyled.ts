@@ -16,7 +16,7 @@ export const LoginPageStyled = styled.div`
 
   @media screen and (max-width: 768px) {
     justify-content: center;
-    background-image: url('/assets/images/estora-piled.JPG');
+    background-image: url('/assets/images/estora-piled.webp');
     background-size: 100%;
     background-position: 50%;
     padding: 100px 0px;

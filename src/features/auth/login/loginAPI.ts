@@ -1,4 +1,4 @@
-import { LoginModel } from '../../model/login-model';
+import { LoginModel } from '../../../model/auth-model';
 
 export const postLogin = async (login: LoginModel) => {
   const response = await fetch(

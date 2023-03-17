@@ -1,7 +1,7 @@
-import { Login } from '../../../features/auth/login/Login';
-import { LoginPageStyled } from './LoginPageStyled';
+import { Register } from '../../../features/auth/register/Register';
+import { LoginPageStyled } from '../login-page/LoginPageStyled';
 
-export const LoginPage = () => {
+export const RegisterPage = () => {
   return (
     <LoginPageStyled>
       <img
@@ -9,7 +9,7 @@ export const LoginPage = () => {
         alt="estoras apiladas"
         className="piledstora__img"
       />
-      <Login />
+      <Register />
     </LoginPageStyled>
   );
 };

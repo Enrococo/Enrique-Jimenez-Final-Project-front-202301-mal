@@ -2,45 +2,41 @@ import { rest } from 'msw';
 
 export const handlers = [
   rest.post(
-    'https://enrique-jimenez-final-project-back.onrender.com/auth/login',
-    async (req, res, ctx) => {
-      return res(ctx.status(201));
+    `https://enrique-jimenez-final-project-back.onrender.com/auth/login`,
+    (_req, res, ctx) => {
+      return res.once(ctx.status(201), ctx.json({ accessToken: 'token' }));
+    }
+  ),
+  rest.post(
+    `https://enrique-jimenez-final-project-back.onrender.com/auth/register`,
+    (_req, res, ctx) => {
+      return res(
+        ctx.status(201),
+        ctx.json({ msg: 'User registered successfully!' })
+      );
     }
   ),
 ];
 
 export const errorHandlers = [
   rest.post(
-    'https://enrique-jimenez-final-project-back.onrender.com/auth/login',
-    (req, res, ctx) => {
-      return res.networkError('Ciao');
+    `https://enrique-jimenez-final-project-back.onrender.com/auth/login`,
+    (_req, res, ctx) => {
+      return res.once(
+        ctx.status(404),
+        ctx.json({
+          msg: 'There is no registered user with this email and password',
+        })
+      );
     }
   ),
-];
-
-export const errorHandler404 = [
   rest.post(
-    'https://enrique-jimenez-final-project-back.onrender.com/auth/login',
+    `https://enrique-jimenez-final-project-back.onrender.com/auth/register`,
     async (req, res, ctx) => {
-      return res(ctx.status(404));
-    }
-  ),
-];
-
-export const errorHandler400 = [
-  rest.post(
-    'https://enrique-jimenez-final-project-back.onrender.com/auth/login',
-    async (req, res, ctx) => {
-      return res(ctx.status(400));
-    }
-  ),
-];
-
-export const errorHandler500 = [
-  rest.post(
-    'https://enrique-jimenez-final-project-back.onrender.com/auth/login',
-    async (req, res, ctx) => {
-      return res(ctx.status(500));
+      return res.once(
+        ctx.status(400),
+        ctx.json({ msg: '"email" must be valid email' })
+      );
     }
   ),
 ];
