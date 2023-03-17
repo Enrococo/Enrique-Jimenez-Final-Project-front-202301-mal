@@ -6,17 +6,17 @@ import { Link } from 'react-router-dom';
 export const Login = () => {
   const dispatch = useAppDispatch();
   const selectState = useAppSelector(selectAuth);
-  const { loginMsg, status } = selectState;
+  const { loginMsg, loginState } = selectState;
 
   const showUserFeedback = () => {
-    switch (status) {
-      case 'failed':
+    switch (loginState) {
+      case 'error':
         return (
           <span className="error info" aria-label="error">
             {loginMsg}
           </span>
         );
-      case 'idle':
+      case 'success':
         return (
           <div className="login">
             <span className="login_text">Sesión iniciada correctamente</span>
@@ -25,7 +25,7 @@ export const Login = () => {
           </div>
         );
 
-      case 'loading':
+      case 'idle':
         return (
           <span className="loading info" aria-label="loading">
             {' '}

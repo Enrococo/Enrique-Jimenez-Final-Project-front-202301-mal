@@ -6,18 +6,18 @@ import { RegisterStyled } from './register-styled';
 export const Register = () => {
   const dispatch = useAppDispatch();
   const selectState = useAppSelector(selectAuth);
-  const { loginMsg, status } = selectState;
+  const { loginMsg, registerState } = selectState;
 
   const showUserFeedback = () => {
-    switch (status) {
-      case 'failed':
+    switch (registerState) {
+      case 'error':
         return (
           <span className="error info" aria-label="error">
             {loginMsg}
           </span>
         );
 
-      case 'idle':
+      case 'success':
         return (
           <div className="login">
             <span className="login_text">
@@ -26,7 +26,7 @@ export const Register = () => {
             <Link to="/login">Inicia sesión</Link>
           </div>
         );
-      case 'loading':
+      case 'idle':
         return <span className="loading info"> Cargando...</span>;
     }
   };
