@@ -65,7 +65,7 @@ export const HeaderStyled = styled.div`
 export const HeaderButton = styled.button`
   display: grid;
   border: none;
-  z-index: 999;
+  z-index: 100;
   top: 0;
   right: 0;
   gap: 10px;
@@ -100,7 +100,7 @@ export const HeaderContainer = styled.header<HeaderProps>`
   height: 100%;
   position: fixed;
 
-  z-index: 100;
+  z-index: 50;
   ${({ isHeaderOpen }: HeaderProps) =>
     isHeaderOpen
       ? `
