@@ -12,7 +12,6 @@ export const LoginStyled = styled.form`
   display: flex;
   flex-direction: column;
   max-width: 45%;
-  position: relative;
   display: flex;
   align-items: flex-start;
 
