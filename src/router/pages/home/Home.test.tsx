@@ -17,7 +17,9 @@ test('When rendering home, the title should be displayed', () => {
   );
 
   const title = screen.getByText(
-    'Estamos trabajando duro para que pronto puedas crear tu propia alfombra Modular'
+    'SACA TU LADO MÁS CREATIVO CON ESTORA MODULAR'
   );
+  const subTitle = screen.getByText('Una Alfombra Diferente Cada Día');
   expect(title).toBeInTheDocument();
+  expect(subTitle).toBeInTheDocument();
 });

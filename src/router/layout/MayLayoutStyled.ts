@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 
 export const LayoutStyled = styled.div`
-  display: flex;
-  flex-direction: column;
+  height: 100%;
+  position: relative;
   width: 100%;
-  padding: 10px 0px;
-  display: flex;
+  padding: 0px 0px;
   gap: 10px;
   align-items: center;
 
