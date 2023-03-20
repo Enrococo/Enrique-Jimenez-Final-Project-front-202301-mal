@@ -1,17 +1,16 @@
+import { Link } from 'react-router-dom';
 import { HomeStyled } from './HomeStyled';
 
 export const Home = () => {
   return (
     <HomeStyled>
-      <img
-        src="/assets/images/estora-modular.gif"
-        alt="Gif estora modular"
-        className="estora-gif"
-      />
-      <h2 className="Wip">
-        Estamos trabajando duro para que pronto puedas crear tu propia alfombra
-        Modular
-      </h2>
+      <h2 className="Wip">SACA TU LADO MÁS CREATIVO CON ESTORA MODULAR</h2>
+      <Link to={'/create'}>
+        <button type="submit" value="Create" className="create__button">
+          Crea tu Estora Modular
+        </button>
+      </Link>
+      <h1 className="Hook">Una Alfombra Diferente Cada Día</h1>
     </HomeStyled>
   );
 };
