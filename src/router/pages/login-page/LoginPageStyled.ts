@@ -9,6 +9,8 @@ export const LoginPageStyled = styled.div`
   padding: 0rem;
   gap: 2.5%;
   background-color: white;
+  position: inherit;
+  z-index: -50;
 
   .piledstora__img {
     width: 50%;
