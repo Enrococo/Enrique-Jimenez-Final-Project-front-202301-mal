@@ -1,0 +1,80 @@
+:root {
+  /* COLORS */
+  --color-primary: hsl(0, 0%, 100%);
+  --color-secondary: rgba(60, 60, 59);
+  --color-secondary-hover: hsl(231, 13%, 72%);
+  --color-secondary-darker: hsl(231, 13%, 50%);
+  --color-tertiary: rgba(255, 122, 61);
+  --color-tertiary-hover: hsl(14, 98%, 68%);
+  --color-tertiary-darker: hsl(14, 85%, 55%);
+  --color-success: hsl(120, 50%, 50%);
+  --color-warning: hsl(60, 50%, 50%);
+  --color-danger: hsl(0, 50%, 50%);
+
+  /* BACKGROUND COLORS */
+  --bg-color-primary: rgba(255, 255, 255, 0.6);
+  --bg-color-secondary: hsl(253, 27%, 17%);
+  --bg-color-tertiary: hsl(252, 26%, 26%);
+  --bg-color-success: hsl(120, 50%, 50%);
+  --bg-color-warning: hsl(60, 50%, 50%);
+  --bg-color-danger: hsl(0, 50%, 50%);
+
+  /* MARGINS */
+  --margin-xxs: 0.5rem;
+  --margin-xs: 0.75rem;
+  --margin-s: 1rem;
+  --margin-m: 1.5rem;
+  --margin-l: 2rem;
+  --margin-xl: 2.5rem;
+  --margin-xxl: 3rem;
+  --margin-xxxl: 4rem;
+
+  /* PADDINGS */
+  --padding-xxs: 0.5rem;
+  --padding-xs: 0.75rem;
+  --padding-s: 1rem;
+  --padding-m: 1.5rem;
+  --padding-l: 2rem;
+  --padding-xl: 2.5rem;
+  --padding-xxl: 3rem;
+  --padding-xxxl: 4rem;
+
+  /* FONT FAMILIES */
+  --font-family-inter-light: "Inter-Light", sans-serif;
+  --font-family-inter-regular: "Inter-Regular", sans-serif;
+  --font-family-inter-bold: "Inter-Bold", sans-serif;
+  --font-family-ubuntu-light: "Ubuntu-Light", sans-serif;
+  --font-family-ubuntu-regular: "Ubuntu-Regular", sans-serif;
+  --font-family-ubuntu-bold: "Ubuntu-Bold", sans-serif;
+
+  /* FONT WEIGHTS */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* FONT SIZES */
+  --font-size-xxxs: 0.875rem;
+  --font-size-xxs: 1rem;
+  --font-size-xs: 1.125rem;
+  --font-size-s: 1.25rem;
+  --font-size-m: 1.5rem;
+  --font-size-l: 1.75rem;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 2.5rem;
+  --font-size-xxxl: 3rem;
+  --font-size-xxxxl: 4rem;
+
+  /* BORDER RADIUS */
+  --border-none: 0px;
+  --border-xs: 20px;
+  --border-s: 40px;
+  --border-m: 60px;
+  --border-l: 100px;
+  --border-xl: 50%;
+
+  /* TRANSITIONS */
+  --transition-short: all 100ms ease-in-out;
+  --transition-medium: all 200ms ease-in-out;
+  --transition-long: all 320ms ease-in-out;
+}
