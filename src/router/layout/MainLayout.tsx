@@ -1,17 +1,14 @@
 import { Outlet } from 'react-router-dom';
+import { Header } from '../../features/header/Header';
 import { LayoutStyled } from './MayLayoutStyled';
 
 const MainLayout = () => {
   return (
     <LayoutStyled>
-      <img
-        className="logo__header"
-        src="/assets/images/estora-logo.svg"
-        alt="estora_logo"
-      />
-      <main>
-        <Outlet />
-      </main>
+      <Header />
+
+      <Outlet />
+
       <footer className="layout__footer">Made by @enrococo</footer>
     </LayoutStyled>
   );
