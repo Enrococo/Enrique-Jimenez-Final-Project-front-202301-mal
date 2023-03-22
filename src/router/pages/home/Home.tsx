@@ -5,7 +5,7 @@ export const Home = () => {
   return (
     <HomeStyled>
       <h2 className="Wip">SACA TU LADO MÁS CREATIVO CON ESTORA MODULAR</h2>
-      <Link to={'/create'}>
+      <Link to={'/customize'}>
         <button type="submit" value="Create" className="create__button">
           Crea tu Estora Modular
         </button>
