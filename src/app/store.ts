@@ -1,9 +1,13 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import authReducer from '../features/auth/auth-slice';
+import modularItemReducer from '../features/customize/modular-item/modularItemSlice';
+import boardReducer from '../features/customize/board-grid/boardSlice';
 
 export const store = configureStore({
   reducer: {
     auth: authReducer,
+    modularItem: modularItemReducer,
+    board: boardReducer,
   },
 
   middleware: (getDefaultMiddleware) =>
