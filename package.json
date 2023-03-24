@@ -14,11 +14,13 @@
     "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^27.5.2",
     "@types/node": "^17.0.45",
+    "@types/raf": "^3.4.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@types/styled-components": "^5.1.26",
     "babel-plugin-macros": "^3.1.0",
     "msw": "^1.1.0",
+    "raf": "^3.4.1",
     "react": "^18.2.0",
     "react-dnd": "^16.0.1",
     "react-dnd-html5-backend": "^16.0.1",
@@ -33,7 +35,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!react-dnd)/\"",
     "eject": "react-scripts eject",
     "prepare": "husky install"
   },
@@ -56,6 +58,9 @@
     ]
   },
   "devDependencies": {
+    "@cfaester/enzyme-adapter-react-18": "^0.7.0",
+    "@types/enzyme": "^3.10.12",
+    "enzyme": "^3.11.0",
     "husky": "^8.0.0",
     "prettier": "^2.8.4"
   }
