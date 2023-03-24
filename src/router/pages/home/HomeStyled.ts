@@ -45,7 +45,7 @@ export const HomeStyled = styled.div`
     font-size: large;
     background-color: white;
     color: var(--color-tertiary);
-    border: 2px var(--color-tertiary);
+    border: 2px solid var(--color-tertiary);
     padding: 10px 20px;
     border-radius: 6px;
   }
