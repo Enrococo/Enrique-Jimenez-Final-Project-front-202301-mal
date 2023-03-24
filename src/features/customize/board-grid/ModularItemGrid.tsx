@@ -7,7 +7,7 @@ interface ModularItemGridProps {
 }
 
 export const ModularItemGrid: FC<ModularItemGridProps> = ({ imgUrl }) => {
-  const [{ isDragging }, drag] = useDrag(() => ({
+  const [, drag] = useDrag(() => ({
     type: ItemTypes.KNIGHT,
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),

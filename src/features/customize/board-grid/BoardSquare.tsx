@@ -24,7 +24,6 @@ export const BoardSquare: FC<BoardSquareProps> = ({ x, y, children }) => {
       accept: ItemTypes.KNIGHT,
       drop: () => {
         dispatch(addItemUrl(currentItemUrl));
-
         dispatch(changePosition([x, y]));
       },
       collect: (monitor) => ({
