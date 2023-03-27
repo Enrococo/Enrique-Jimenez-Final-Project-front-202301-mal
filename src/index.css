@@ -19,8 +19,14 @@ main {
   height: 100%;
 }
 
+h2 {
+  color: var(--color-secondary-titles);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+}
+
 h3 {
-  color: black;
+  color: var(--color-secondary-titles);
   font-family: "Montserrat", sans-serif;
   font-size: 1.3rem;
 }
@@ -39,7 +45,7 @@ ul {
 }
 
 input {
-  padding: 3px;
+  padding: 5px;
   width: 85%;
   background-color: rgba(255, 255, 255, 0.7);
   border: 1.5px solid rgba(0, 0, 0, 0.472);
