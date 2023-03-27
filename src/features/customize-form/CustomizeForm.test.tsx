@@ -6,6 +6,7 @@ import { server } from '../../mocks/server';
 import userEvent from '@testing-library/user-event';
 import { CustomizeForm } from './CustomizeForm';
 import { MemoryRouter } from 'react-router-dom';
+import React from 'react';
 
 jest.mock('html2canvas');
 const html2CanvasMock = jest.mocked(html2canvas);
