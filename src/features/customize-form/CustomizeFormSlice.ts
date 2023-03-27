@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
 import { APIStatus } from '../../shared/models/apistatus';
-import { CustomizeResponse, ModularModel } from './customize-model';
+import { CustomizeResponse } from './customize-model';
 import { postModular } from './customizeAPI';
 
 const initialState = {
