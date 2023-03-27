@@ -4,7 +4,8 @@ export const ModularItemStyled = styled.div`
   width: fit-content;
   cursor: grab;
   background: var(--color-secondary-clear);
-  width: 25%;
+  margin: 2rem;
+  width: 20%;
   aspect-ratio: 1/1;
   border: 4px solid var(--color-tertiary);
 

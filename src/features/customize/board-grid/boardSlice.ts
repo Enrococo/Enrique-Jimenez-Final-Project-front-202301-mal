@@ -2,11 +2,11 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../../../app/store';
 
 export interface BoardState {
-  knightPosition: number[][];
+  modularPosition: number[][];
 }
 
 const initialState: BoardState = {
-  knightPosition: [],
+  modularPosition: [],
 };
 
 export const boardSlice = createSlice({
@@ -14,12 +14,12 @@ export const boardSlice = createSlice({
   initialState,
   reducers: {
     changePosition: (state, action: PayloadAction<number[]>) => {
-      state.knightPosition.push(action.payload);
+      state.modularPosition.push(action.payload);
     },
   },
 });
 
 export const { changePosition } = boardSlice.actions;
-export const selectPosition = (state: RootState) => state.board.knightPosition;
+export const selectPosition = (state: RootState) => state.board.modularPosition;
 
 export default boardSlice.reducer;

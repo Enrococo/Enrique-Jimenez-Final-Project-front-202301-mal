@@ -11,7 +11,7 @@ export const Square: FC<SquareProps> = ({ children }) => {
     <div
       style={{
         backgroundColor: fill,
-        border: '1px solid var(--color-tertiary-clear)',
+        border: '1px solid rgba(255,255,255,0.4)',
         width: '100%',
         height: '100%',
       }}
