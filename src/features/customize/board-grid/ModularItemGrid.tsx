@@ -19,11 +19,12 @@ export const ModularItemGrid: FC<ModularItemGridProps> = ({ imgUrl }) => {
       aria-label="modularImg"
       ref={drag}
       style={{
+        border: '1px solid var(--color-secondary)',
         width: '-moz-fit-content',
         fontSize: 25,
         fontWeight: 'bold',
         cursor: 'move',
-        background: '#deded4',
+        background: 'var(--color-secondary-clear)',
       }}
     >
       <img src={imgUrl} style={{ width: '100%' }} alt="selected-module" />

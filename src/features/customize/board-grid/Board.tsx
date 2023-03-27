@@ -32,8 +32,8 @@ export const Board = () => {
     knightPosition: number[][],
     imagesUrl: string[]
   ) => {
-    const x = i % 8;
-    const y = Math.floor(i / 8);
+    const x = i % 6;
+    const y = Math.floor(i / 6);
 
     return (
       <div
@@ -43,7 +43,7 @@ export const Board = () => {
           dispatch(addItemUrl(currentItemUrl));
         }}
         key={i}
-        style={{ width: '12.5%', height: '12.5%' }}
+        style={{ width: '16.666%', height: '16.666%' }}
       >
         <BoardSquare x={x} y={y}>
           {renderPiece(x, y, knightPosition, imagesUrl)}
@@ -53,14 +53,15 @@ export const Board = () => {
   };
 
   const squares = [];
-  for (let i = 0; i < 64; i++) {
+  for (let i = 0; i < 36; i++) {
     squares.push(renderSquare(i, position, itemsUrl));
   }
 
   return (
     <div
+      id="board"
       style={{
-        width: '100%',
+        width: '80%',
         aspectRatio: '1/1',
         display: 'flex',
         flexWrap: 'wrap',

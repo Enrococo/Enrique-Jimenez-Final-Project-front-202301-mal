@@ -14,10 +14,11 @@ export const GridModularStyled = styled.div`
   }
 
   .modular-item {
-    background-color: #deded4;
-    border: 3px solid #deded4;
+    width: 100%;
+    background-color: var(--color-secondary-clear);
+    border: 3px solid var(--color-secondary-clear);
     :hover {
-      border: 3px solid #ff7a3d;
+      border: 3px solid var(--color-tertiary);
     }
   }
 `;
