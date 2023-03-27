@@ -1,5 +1,4 @@
 import html2canvas from 'html2canvas';
-import { Link } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { selectModularItemsUrl } from '../customize/modular-item/modularItemSlice';
 import { postNewModular, selectCustomize } from './CustomizeFormSlice';
