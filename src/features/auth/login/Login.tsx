@@ -21,7 +21,6 @@ export const Login = () => {
           <div className="login">
             <span className="login_text">Sesión iniciada correctamente</span>
             <Link to="/">Volver a inicio</Link>
-            <Link to="/user-profile">Ver tu perfil</Link>
           </div>
         );
 
@@ -48,10 +47,19 @@ export const Login = () => {
       <input type="text" name="email" placeholder="Correo electrónico" />
 
       <input type="password" name="password" placeholder="Contraseña" />
-
-      <button type="submit" value="Create" className="register__button">
-        Entrar
-      </button>
+      <div className="form-submit">
+        <button
+          disabled={loginState !== '' && loginState !== 'error' ? true : false}
+          type="submit"
+          value="Create"
+          className="register__button"
+        >
+          Entrar
+        </button>
+        <span className="span_small">
+          ¿Aún no eres usuario? <Link to="/register">Regístrate</Link>
+        </span>
+      </div>
       {showUserFeedback()}
     </LoginStyled>
   );

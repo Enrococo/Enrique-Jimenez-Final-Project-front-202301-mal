@@ -25,13 +25,14 @@ export const LoginStyled = styled.form`
     border: none;
     padding: 4px 30px;
     border-radius: 6px;
+    :disabled {
+      background-color: var(--color-tertiary-disabled);
+    }
   }
 
   .info {
     font-size: small;
-    font-weight: bolder;
-    position: absolute;
-    transform: translate(0, -120%);
+    font-weight: bold;
   }
 
   .error {
@@ -39,15 +40,14 @@ export const LoginStyled = styled.form`
   }
 
   .login {
-    background-color: white;
+    font-size: small;
+    font-weight: bold;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
-    width: 85%;
-    height: 75%;
-    position: absolute;
+
     color: green;
-    justify-content: center;
+    justify-content: start;
   }
 
   .default {
@@ -56,5 +56,16 @@ export const LoginStyled = styled.form`
 
   .loading {
     color: black;
+  }
+
+  .span_small {
+    font-size: small;
+    color: black;
+  }
+
+  .form-submit {
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
   }
 `;
