@@ -33,20 +33,8 @@ export const CustomizeForm = () => {
         );
     }
   };
-  let screenshot;
+
   let canvas: HTMLCanvasElement;
-  function dataURItoBlob(dataURI: string) {
-    var byteString;
-    if (dataURI.split(',')[0].indexOf('base64') >= 0)
-      byteString = atob(dataURI.split(',')[1]);
-    else byteString = unescape(dataURI.split(',')[1]);
-    var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
-    var ia = new Uint8Array(byteString.length);
-    for (var i = 0; i < byteString.length; i++) {
-      ia[i] = byteString.charCodeAt(i);
-    }
-    return new Blob([ia], { type: mimeString });
-  }
 
   return (
     <>
@@ -61,9 +49,11 @@ export const CustomizeForm = () => {
             document.querySelector('#board') as HTMLElement
           );
 
-          screenshot = canvas.toDataURL();
-          const screenshotFile = await dataURItoBlob(screenshot);
-          formData.append('thumb', screenshotFile);
+          const screenshotFile = await new Promise<Blob | null>((resolve) =>
+            canvas.toBlob((blob) => resolve(blob), 'image/png')
+          );
+
+          formData.append('thumb', screenshotFile as Blob);
           dispatch(postNewModular(formData));
         }}
       >
