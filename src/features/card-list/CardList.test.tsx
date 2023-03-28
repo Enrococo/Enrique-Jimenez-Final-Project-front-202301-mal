@@ -44,8 +44,8 @@ describe('When the component loads and API responds with error', () => {
     );
     const loading = await screen.findByRole('img');
     expect(loading).toHaveAttribute('alt', 'loading');
-    await waitFor(async () => {
-      const errorMessage = await screen.findByRole('paragraph');
+    await waitFor(() => {
+      const errorMessage = screen.getByRole('paragraph');
       expect(errorMessage).toHaveTextContent('Error');
     });
   });
