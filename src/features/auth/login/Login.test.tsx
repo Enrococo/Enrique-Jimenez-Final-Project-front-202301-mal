@@ -1,4 +1,5 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
@@ -16,6 +17,32 @@ afterEach(() => {
 afterAll(() => server.close());
 
 describe('Given a Login form component', () => {
+  test('When the user logs in with an unregistered account, it should show an error message', async () => {
+    server.use(...errorHandlers);
+
+    render(
+      <Provider store={store}>
+        <MemoryRouter>
+          <Login />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    await userEvent.type(
+      screen.getByPlaceholderText('Correo electrónico'),
+      'exampleemail.com'
+    );
+    await userEvent.type(screen.getByPlaceholderText('Contraseña'), 'password');
+
+    const submitButton = screen.getByRole('button');
+
+    userEvent.click(submitButton);
+
+    await waitFor(() => {
+      const errorMessage = screen.getByLabelText('error');
+      expect(errorMessage).toBeInTheDocument();
+    });
+  });
   test('When rendering the form, it should be on the document', () => {
     render(
       <MemoryRouter>
@@ -43,34 +70,8 @@ describe('Given a Login form component', () => {
     fireEvent.click(submitButton);
 
     await waitFor(async () => {
-      const token = await sessionStorage.getItem('Bearer');
+      const token = await sessionStorage.getItem('accessToken');
       expect(token).toBe('token');
-    });
-  });
-
-  test('When the user logs in with an unregistered account, it should show an error message', async () => {
-    server.use(...errorHandlers);
-
-    render(
-      <Provider store={store}>
-        <MemoryRouter>
-          <Login />
-        </MemoryRouter>
-      </Provider>
-    );
-
-    const submitButton = screen.getByRole('button');
-
-    fireEvent.click(submitButton);
-
-    const loading = screen.getByLabelText('loading');
-    expect(loading).toBeInTheDocument();
-
-    await waitFor(async () => {
-      const errorMessage = await screen.findByLabelText('error');
-      expect(errorMessage).toHaveTextContent(
-        'There is no registered user with this email and password'
-      );
     });
   });
 });

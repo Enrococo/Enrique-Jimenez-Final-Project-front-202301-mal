@@ -99,30 +99,4 @@ describe('Given a Customize form component', () => {
       expect(errorMessage).toHaveTextContent('Ha habido un error');
     });
   });
-
-  // test('When the user logs in with an unregistered account, it should show an error message', async () => {
-  //   server.use(...errorHandlers);
-
-  //   render(
-  //     <Provider store={store}>
-  //       <MemoryRouter>
-  //         <Login />
-  //       </MemoryRouter>
-  //     </Provider>
-  //   );
-
-  //   const submitButton = screen.getByRole('button');
-
-  //   fireEvent.click(submitButton);
-
-  //   const loading = screen.getByLabelText('loading');
-  //   expect(loading).toBeInTheDocument();
-
-  //   await waitFor(async () => {
-  //     const errorMessage = await screen.findByLabelText('error');
-  //     expect(errorMessage).toHaveTextContent(
-  //       'There is no registered user with this email and password'
-  //     );
-  //   });
-  // });
 });

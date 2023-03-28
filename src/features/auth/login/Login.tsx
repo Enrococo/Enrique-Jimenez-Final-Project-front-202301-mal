@@ -27,7 +27,6 @@ export const Login = () => {
       case 'idle':
         return (
           <span className="loading info" aria-label="loading">
-            {' '}
             Cargando...
           </span>
         );

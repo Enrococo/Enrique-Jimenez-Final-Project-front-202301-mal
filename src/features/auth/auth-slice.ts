@@ -77,7 +77,7 @@ export const authSlice = createSlice({
       )
 
       .addCase(postNewLogin.rejected, (state, action: any) => {
-        state.status = APIStatus.ERROR;
+        state.status = 'failed';
         state.loginState = 'error';
         state.loginMsg = action.error.message;
       });

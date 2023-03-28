@@ -32,7 +32,7 @@ export const errorHandlers = [
   ),
   rest.post(
     `https://enrique-jimenez-final-project-back.onrender.com/auth/register`,
-    async (req, res, ctx) => {
+    async (_req, res, ctx) => {
       return res.once(
         ctx.status(400),
         ctx.json({ msg: '"email" must be valid email' })

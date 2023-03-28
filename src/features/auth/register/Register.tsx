@@ -46,7 +46,6 @@ export const Register = () => {
           <input type="text" name="surName" placeholder="Apellidos" />
         </div>
         <input type="text" name="email" placeholder="Correo electrónico" />
-
         <input type="password" name="password" placeholder="Contraseña" />
         <div className="form-submit">
           <button
@@ -60,7 +59,7 @@ export const Register = () => {
             Regístrate
           </button>
           <span className="span_small">
-            ¿Ya eres usuario? <Link to="/register">Accede</Link>
+            ¿Ya eres usuario? <Link to="/login">Accede</Link>
           </span>
         </div>
         {showUserFeedback()}
