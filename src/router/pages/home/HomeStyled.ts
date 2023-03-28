@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const HomeStyled = styled.div`
   justify-content: center;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
