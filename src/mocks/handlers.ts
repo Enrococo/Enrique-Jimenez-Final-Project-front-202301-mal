@@ -1,4 +1,5 @@
 import { rest } from 'msw';
+import { carpetMockArray } from './carpet-mock';
 
 export const handlers = [
   rest.post(
@@ -14,6 +15,12 @@ export const handlers = [
         ctx.status(201),
         ctx.json({ msg: 'User registered successfully!' })
       );
+    }
+  ),
+  rest.get(
+    'https://enrique-jimenez-final-project-back.onrender.com/api/v1/carpets/create',
+    (_req, res, ctx) => {
+      return res(ctx.status(200), ctx.json(carpetMockArray));
     }
   ),
 ];
