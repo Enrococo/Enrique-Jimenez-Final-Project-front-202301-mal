@@ -10,7 +10,9 @@ import CardList from './CardList';
 describe('Given a card list component', () => {
   beforeAll(() => {
     server.listen();
+    server.resetHandlers();
   });
+
   afterAll(() => server.close());
   test('When the page is loaded, it should show a list of characters', async () => {
     window.Array.prototype.map(() => (
@@ -29,24 +31,27 @@ describe('Given a card list component', () => {
       expect(carpets.length).toBe(2);
     });
   });
-});
 
-describe('When the component loads and API responds with error', () => {
-  beforeAll(() => server.listen());
+  describe('When the component loads and API responds with error', () => {
+    beforeAll(() => {
+      server.listen();
+      server.resetHandlers();
+    });
 
-  afterAll(() => server.close());
-  test('Then it should show loading and later render an error message', async () => {
-    server.use(...errorHandlers);
-    render(
-      <Provider store={store}>
-        <CardList />
-      </Provider>
-    );
-    const loading = await screen.findByRole('img');
-    expect(loading).toHaveAttribute('alt', 'loading');
-    await waitFor(() => {
-      const errorMessage = screen.getByRole('paragraph');
-      expect(errorMessage).toHaveTextContent('Error');
+    afterAll(() => server.close());
+    test('Then it should show loading and later render an error message', async () => {
+      server.use(...errorHandlers);
+      render(
+        <Provider store={store}>
+          <CardList />
+        </Provider>
+      );
+      const loading = await screen.findByRole('img');
+      expect(loading).toHaveAttribute('alt', 'loading');
+      await waitFor(() => {
+        const errorMessage = screen.getByRole('paragraph');
+        expect(errorMessage).toHaveTextContent('Error');
+      });
     });
   });
 });

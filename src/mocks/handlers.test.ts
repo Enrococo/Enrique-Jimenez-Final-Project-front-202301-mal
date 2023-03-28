@@ -22,8 +22,7 @@ describe('GET /api/v1/carpets/', () => {
     const response = await fetch(
       'https://enrique-jimenez-final-project-back.onrender.com/api/v1/carpets/create'
     );
-    const data = await response.json();
+
     expect(response.status).toEqual(429);
-    expect(data).toEqual(null);
   });
 });

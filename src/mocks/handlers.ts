@@ -49,7 +49,7 @@ export const errorHandlers = [
   rest.get(
     'https://enrique-jimenez-final-project-back.onrender.com/api/v1/carpets/create',
     (_req, res, ctx) => {
-      return res.once(ctx.status(429), ctx.json(null));
+      return res.once(ctx.status(429));
     }
   ),
 ];
