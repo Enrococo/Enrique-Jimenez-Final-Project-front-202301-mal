@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import MainLayout from './layout/MainLayout';
+import { CarpetsPage } from './pages/carpets/CarpetsPage';
 import { CustomizePage } from './pages/customize/Customize';
 import { Home } from './pages/home/Home';
 import { LoginPage } from './pages/login-page/LoginPage';
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: '/customize',
         element: <CustomizePage />,
+      },
+      {
+        path: '/allcarpets',
+        element: <CarpetsPage />,
       },
     ],
   },
