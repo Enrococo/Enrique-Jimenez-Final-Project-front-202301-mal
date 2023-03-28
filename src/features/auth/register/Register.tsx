@@ -46,12 +46,22 @@ export const Register = () => {
           <input type="text" name="surName" placeholder="Apellidos" />
         </div>
         <input type="text" name="email" placeholder="Correo electrónico" />
-
         <input type="password" name="password" placeholder="Contraseña" />
-
-        <button type="submit" value="Create" className="register__button">
-          Regístrate
-        </button>
+        <div className="form-submit">
+          <button
+            disabled={
+              registerState !== '' && registerState !== 'error' ? true : false
+            }
+            type="submit"
+            value="Create"
+            className="register__button"
+          >
+            Regístrate
+          </button>
+          <span className="span_small">
+            ¿Ya eres usuario? <Link to="/login">Accede</Link>
+          </span>
+        </div>
         {showUserFeedback()}
       </RegisterStyled>
     </>

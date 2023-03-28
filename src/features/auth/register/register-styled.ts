@@ -12,7 +12,6 @@ export const RegisterStyled = styled.form`
   display: flex;
   flex-direction: column;
   max-width: 45%;
-  display: flex;
   align-items: flex-start;
 
   @media screen and (max-width: 768px) {
@@ -25,13 +24,14 @@ export const RegisterStyled = styled.form`
     border: none;
     padding: 4px 30px;
     border-radius: 6px;
+    :disabled {
+      background-color: var(--color-tertiary-disabled);
+    }
   }
 
   .info {
     font-size: small;
     font-weight: bolder;
-    position: absolute;
-    transform: translate(0, -120%);
   }
 
   .error {
@@ -39,15 +39,13 @@ export const RegisterStyled = styled.form`
   }
 
   .login {
-    background-color: white;
+    font-size: small;
+    font-weight: bold;
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 85%;
-    height: 75%;
-    position: absolute;
+    flex-direction: row;
+    gap: 3rem;
     color: green;
-    justify-content: center;
+    justify-content: start;
   }
 
   .default {
@@ -61,5 +59,16 @@ export const RegisterStyled = styled.form`
     display: flex;
     max-width: 85%;
     gap: 10px;
+  }
+
+  .span_small {
+    font-size: small;
+    color: black;
+  }
+
+  .form-submit {
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
   }
 `;

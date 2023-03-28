@@ -72,12 +72,12 @@ export const authSlice = createSlice({
         (state, action: PayloadAction<AuthResponse>) => {
           state.status = APIStatus.IDLE;
           state.loginState = 'success';
-          sessionStorage.setItem('Bearer', action.payload.accessToken);
+          sessionStorage.setItem('accessToken', action.payload.accessToken);
         }
       )
 
       .addCase(postNewLogin.rejected, (state, action: any) => {
-        state.status = APIStatus.ERROR;
+        state.status = 'failed';
         state.loginState = 'error';
         state.loginMsg = action.error.message;
       });

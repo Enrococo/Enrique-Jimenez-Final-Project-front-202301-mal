@@ -100,7 +100,7 @@ export const HeaderContainer = styled.header<HeaderProps>`
   height: 100%;
   position: fixed;
 
-  z-index: 50;
+  z-index: 90;
   ${({ isHeaderOpen }: HeaderProps) =>
     isHeaderOpen
       ? `
