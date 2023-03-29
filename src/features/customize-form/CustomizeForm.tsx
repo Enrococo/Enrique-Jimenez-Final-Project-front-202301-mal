@@ -73,7 +73,7 @@ export const CustomizeForm = () => {
           <input
             type="text"
             name="price"
-            className="customize-form__price"
+            className="customize-form__price-input customize-form__price"
             value={`${selectState.length * 30} €`}
             readOnly
           />

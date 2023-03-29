@@ -22,11 +22,17 @@ export const LoginStyled = styled.form`
   .register__button {
     background-color: #ff7a3d;
     color: white;
-    border: none;
+    border: 2px solid var(--color-tertiary);
     padding: 4px 30px;
     border-radius: 6px;
+    cursor: pointer;
     :disabled {
       background-color: var(--color-tertiary-disabled);
+    }
+    :hover {
+      background-color: white;
+      color: var(--color-tertiary);
+      border: 2px solid var(--color-tertiary);
     }
   }
 
@@ -65,7 +71,8 @@ export const LoginStyled = styled.form`
 
   .form-submit {
     display: flex;
-    width: 85%;
+    width: 100%;
     justify-content: space-between;
+    align-items: center;
   }
 `;

@@ -38,6 +38,7 @@ export const BoardSquare: FC<BoardSquareProps> = ({ x, y, children }) => {
       aria-label="droppable"
       ref={drop}
       style={{
+        position: 'relative',
         width: '100%',
         height: '100%',
       }}

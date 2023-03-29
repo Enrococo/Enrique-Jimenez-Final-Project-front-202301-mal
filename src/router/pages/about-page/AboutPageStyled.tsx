@@ -20,7 +20,10 @@ export const AboutStyled = styled.div`
       width: 100%;
     }
     .about-columnTwo {
-      font-size: medium;
+      font-size: small;
+    }
+    .about-pic {
+      width: 100%;
     }
   }
 

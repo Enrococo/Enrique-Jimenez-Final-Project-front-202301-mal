@@ -32,7 +32,11 @@ export const Header = () => {
           </Link>
         </li>{' '}
         <li>
-          <Link className="menu__link" to={'/allcarpets'}>
+          <Link
+            role="tusModular-link"
+            className="menu__link"
+            to={sessionStorage.length === 1 ? '/allcarpets' : '/login'}
+          >
             Tus Modular
           </Link>
         </li>
@@ -79,7 +83,7 @@ export const Header = () => {
                 aria-label="tu-modular"
                 onClick={() => handleMenuBtnClick()}
                 className="header__navbar__link-text"
-                to={'/allcarpets'}
+                to={sessionStorage.length === 1 ? '/allcarpets' : '/login'}
               >
                 Tus Modular
               </Link>
