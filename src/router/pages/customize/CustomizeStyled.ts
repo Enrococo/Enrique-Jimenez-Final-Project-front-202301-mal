@@ -8,7 +8,6 @@ export const CustomizeStyled = styled.div`
   @media screen and (max-width: 1040px) {
     display: flex;
     flex-direction: column;
-    overflow: scroll;
   }
 
   .columnOne {
