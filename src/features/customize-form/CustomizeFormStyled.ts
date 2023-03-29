@@ -86,6 +86,7 @@ export const CustomizeFormStyled = styled.form`
 
   .customize-form__price__button-containter {
     display: flex;
+    flex-wrap: wrap;
     gap: 10%;
   }
   .customize-form__price {
