@@ -1,6 +1,4 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { AboutStyled } from './AboutPageStyled';
-import { faCameraRetro, faLink } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 export const AboutPage = () => {
