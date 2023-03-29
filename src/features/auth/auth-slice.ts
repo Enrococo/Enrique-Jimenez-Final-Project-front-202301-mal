@@ -8,7 +8,7 @@ import {
 } from '../../model/auth-model';
 import { APIStatus } from '../../shared/models/apistatus';
 import { postUser } from './register/register-api';
-import { postLogin } from './login/loginAPI';
+import { postLogin } from './login/login-api';
 
 const initialState: AuthFormState = {
   registerState: '',

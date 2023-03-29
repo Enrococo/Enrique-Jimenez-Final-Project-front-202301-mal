@@ -2,7 +2,7 @@ import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import authReducer from '../features/auth/auth-slice';
 import modularItemReducer from '../features/customize/modular-item/modularItemSlice';
 import boardReducer from '../features/customize/board-grid/boardSlice';
-import customizeReducer from '../features/customize-form/CustomizeFormSlice';
+import customizeReducer from '../features/customize-form/customize-form-slice';
 import cardListReducer from '../features/card-list/card-list-slice';
 
 export const store = configureStore({

@@ -1,7 +1,7 @@
 import html2canvas from 'html2canvas';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { selectModularItemsUrl } from '../customize/modular-item/modularItemSlice';
-import { postNewModular, selectCustomize } from './CustomizeFormSlice';
+import { postNewModular, selectCustomize } from './customize-form-slice';
 import { CustomizeFormStyled } from './CustomizeFormStyled';
 
 export const CustomizeForm = () => {
@@ -61,7 +61,12 @@ export const CustomizeForm = () => {
           <h3 className="customize-form__title">
             3. Da un nombre a tu creación:
           </h3>
-          <input className="customize-form__name" type="text" name="name" />
+          <input
+            className="customize-form__name"
+            type="text"
+            name="name"
+            required
+          />
         </div>
         <div className="customize-form__price__button-containter">
           <h3 className="customize-form__price">Precio:</h3>

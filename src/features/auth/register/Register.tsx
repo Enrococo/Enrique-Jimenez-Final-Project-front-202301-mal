@@ -42,11 +42,21 @@ export const Register = () => {
       >
         <h3>Rellena tus datos</h3>
         <div className="name_container">
-          <input type="text" name="firstName" placeholder="Nombre" />
+          <input type="text" name="firstName" placeholder="Nombre" required />
           <input type="text" name="surName" placeholder="Apellidos" />
         </div>
-        <input type="text" name="email" placeholder="Correo electrónico" />
-        <input type="password" name="password" placeholder="Contraseña" />
+        <input
+          type="text"
+          name="email"
+          placeholder="Correo electrónico"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Contraseña"
+          required
+        />
         <div className="form-submit">
           <button
             disabled={
