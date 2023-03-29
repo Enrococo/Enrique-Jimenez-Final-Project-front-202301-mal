@@ -43,9 +43,19 @@ export const Login = () => {
       }}
     >
       <h3>Accede a tu perfil</h3>
-      <input type="text" name="email" placeholder="Correo electrónico" />
+      <input
+        type="text"
+        name="email"
+        placeholder="Correo electrónico"
+        required
+      />
 
-      <input type="password" name="password" placeholder="Contraseña" />
+      <input
+        type="password"
+        name="password"
+        placeholder="Contraseña"
+        required
+      />
       <div className="form-submit">
         <button
           disabled={loginState !== '' && loginState !== 'error' ? true : false}
