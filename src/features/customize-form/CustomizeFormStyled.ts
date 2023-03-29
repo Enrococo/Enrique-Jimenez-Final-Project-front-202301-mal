@@ -24,8 +24,14 @@ export const CustomizeFormStyled = styled.form`
     padding: 4px 50px;
     border-radius: 6px;
     font-size: large;
+    border: 2px solid var(--color-tertiary);
     :disabled {
       background-color: var(--color-tertiary-disabled);
+    }
+    :hover {
+      background-color: white;
+      color: var(--color-tertiary);
+      border: 2px solid var(--color-tertiary);
     }
   }
 
@@ -65,6 +71,11 @@ export const CustomizeFormStyled = styled.form`
     border: none;
     background: none;
     font-size: x-large;
+    text-justify: start;
+    padding: 5px;
+    align-self: flex-end;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
   }
 
   .customize-form__name {
@@ -79,26 +90,30 @@ export const CustomizeFormStyled = styled.form`
   }
 
   .create__button-container {
-    width: 100%;
+    max-width: 100%;
     display: flex;
-    justify-content: center;
   }
 
   .customize-form__price__button-containter {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 10%;
+    justify-content: space-between;
   }
-  .customize-form__price {
-    padding: 5px;
-    align-self: flex-end;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bolder;
+
+  .customize-form__price-input {
+    width: 30%;
   }
+
   .customize-form__name__container {
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: flex-start;
+  }
+
+  .customize-form__title {
+    text-align: start;
   }
 `;
