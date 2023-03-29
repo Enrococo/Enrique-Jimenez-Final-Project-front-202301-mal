@@ -6,6 +6,7 @@ import { Home } from './pages/home/Home';
 import { LoginPage } from './pages/login-page/LoginPage';
 import { NotFound } from './pages/notfound/NotFound';
 import { RegisterPage } from './pages/register-page/RegisterPage';
+import { AboutPage } from './pages/about-page/AboutPage';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: '/allcarpets',
         element: <CarpetsPage />,
+      },
+      {
+        path: '/nosotros',
+        element: <AboutPage />,
       },
     ],
   },

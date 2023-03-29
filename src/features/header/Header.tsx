@@ -26,7 +26,16 @@ export const Header = () => {
         />
       </Link>
       <ul className="menu__container">
-        <li>Sobre Nosotros</li> <li>Tienda</li>
+        <li>
+          <Link className="menu__link" to={'/nosotros'}>
+            Sobre Nosotros
+          </Link>
+        </li>{' '}
+        <li>
+          <Link className="menu__link" to={'/allcarpets'}>
+            Tus Modular
+          </Link>
+        </li>
         <li className="user">
           <Link to={'#'}>
             <FontAwesomeIcon icon={faUser} />
@@ -56,23 +65,53 @@ export const Header = () => {
         <nav className="header__navbar">
           <ul className="header__navbar__links-list">
             <li className="header__navbar__link-item">
-              <Link className="header__navbar__link-text" to={'/'}>
+              <Link
+                aria-label="home"
+                onClick={() => handleMenuBtnClick()}
+                className="header__navbar__link-text"
+                to={'/'}
+              >
                 Home
               </Link>
             </li>
             <li className="header__navbar__link-item">
-              <Link className="header__navbar__link-text" to={'/tienda'}>
-                Tienda
+              <Link
+                aria-label="tu-modular"
+                onClick={() => handleMenuBtnClick()}
+                className="header__navbar__link-text"
+                to={'/allcarpets'}
+              >
+                Tus Modular
               </Link>
             </li>
             <li className="header__navbar__link-item">
-              <Link className="header__navbar__link-text" to={'/nosotros'}>
+              <Link
+                aria-label="nosotros"
+                onClick={() => handleMenuBtnClick()}
+                className="header__navbar__link-text"
+                to={'/nosotros'}
+              >
                 Nosotros
               </Link>
             </li>
             <li className="header__navbar__link-item">
-              <Link className="header__navbar__link-text" to={'/login'}>
-                Accede{' '}
+              <Link
+                aria-label="login"
+                onClick={() => handleMenuBtnClick()}
+                className="header__navbar__link-text"
+                to={'/login'}
+              >
+                Accede
+              </Link>
+            </li>
+            <li className="header__navbar__link-item">
+              <Link
+                aria-label="register"
+                onClick={() => handleMenuBtnClick()}
+                className="header__navbar__link-text"
+                to={'/register'}
+              >
+                Regístrate
               </Link>
             </li>
           </ul>

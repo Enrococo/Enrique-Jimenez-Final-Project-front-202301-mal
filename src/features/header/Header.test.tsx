@@ -50,4 +50,96 @@ describe('Given a header component', () => {
 
     expect(menuButton).toHaveClass('active');
   });
+  test('calls the function to toggle the menu when element home in the list is clicked', async () => {
+    render(
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>
+    );
+    const homeLink = screen.getByLabelText('home');
+    const menuButton = screen.getByRole('button');
+
+    expect(menuButton).toBeInTheDocument();
+
+    expect(menuButton).not.toHaveClass('active');
+
+    await fireEvent.click(menuButton);
+    expect(menuButton).toHaveClass('active');
+    await fireEvent.click(homeLink);
+    expect(menuButton).not.toHaveClass('active');
+  });
+  test('calls the function to toggle the menu when element tu modular in the list is clicked', async () => {
+    render(
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>
+    );
+    const modularLink = screen.getByLabelText('tu-modular');
+    const menuButton = screen.getByRole('button');
+
+    expect(menuButton).toBeInTheDocument();
+
+    expect(menuButton).not.toHaveClass('active');
+
+    await fireEvent.click(menuButton);
+    expect(menuButton).toHaveClass('active');
+    await fireEvent.click(modularLink);
+    expect(menuButton).not.toHaveClass('active');
+  });
+  test('calls the function to toggle the menu when element nosotros  in the list is clicked', async () => {
+    render(
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>
+    );
+    const nosotrosLink = screen.getByLabelText('nosotros');
+    const menuButton = screen.getByRole('button');
+
+    expect(menuButton).toBeInTheDocument();
+
+    expect(menuButton).not.toHaveClass('active');
+
+    await fireEvent.click(menuButton);
+    expect(menuButton).toHaveClass('active');
+    await fireEvent.click(nosotrosLink);
+    expect(menuButton).not.toHaveClass('active');
+  });
+
+  test('calls the function to toggle the menu when element login  in the list is clicked', async () => {
+    render(
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>
+    );
+    const loginLink = screen.getByLabelText('login');
+    const menuButton = screen.getByRole('button');
+
+    expect(menuButton).toBeInTheDocument();
+
+    expect(menuButton).not.toHaveClass('active');
+
+    await fireEvent.click(menuButton);
+    expect(menuButton).toHaveClass('active');
+    await fireEvent.click(loginLink);
+    expect(menuButton).not.toHaveClass('active');
+  });
+
+  test('calls the function to toggle the menu when element register  in the list is clicked', async () => {
+    render(
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>
+    );
+    const registerLink = screen.getByLabelText('register');
+    const menuButton = screen.getByRole('button');
+
+    expect(menuButton).toBeInTheDocument();
+
+    expect(menuButton).not.toHaveClass('active');
+
+    await fireEvent.click(menuButton);
+    expect(menuButton).toHaveClass('active');
+    await fireEvent.click(registerLink);
+    expect(menuButton).not.toHaveClass('active');
+  });
 });
