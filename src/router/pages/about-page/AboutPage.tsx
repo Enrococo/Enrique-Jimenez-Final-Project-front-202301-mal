@@ -5,7 +5,11 @@ export const AboutPage = () => {
   return (
     <AboutStyled>
       <div className="about-columnOne">
-        <img src="/assets/images/about-section.webp" alt="" />
+        <img
+          className="about-pic"
+          src="/assets/images/about-section.webp"
+          alt="about-pic"
+        />
       </div>
       <div className="about-columnTwo">
         <h2>Nuestra Historia</h2>
