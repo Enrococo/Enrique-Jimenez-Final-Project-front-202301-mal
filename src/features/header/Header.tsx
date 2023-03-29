@@ -33,7 +33,7 @@ export const Header = () => {
         </li>{' '}
         <li>
           <Link
-            role="tusModular-link"
+            aria-label="tusModular-link"
             className="menu__link"
             to={sessionStorage.length === 1 ? '/allcarpets' : '/login'}
           >
@@ -41,7 +41,7 @@ export const Header = () => {
           </Link>
         </li>
         <li className="user">
-          <Link to={'#'}>
+          <Link aria-label="Open Login and register menu" to={'#'}>
             <FontAwesomeIcon icon={faUser} />
           </Link>
           <ul>

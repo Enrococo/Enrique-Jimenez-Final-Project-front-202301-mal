@@ -11,7 +11,7 @@ export const LayoutStyled = styled.div`
   .layout__footer {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
       sans-serif;
-    color: #ffe81f;
+    color: var(--color-secondary);
     text-align: center;
   }
 

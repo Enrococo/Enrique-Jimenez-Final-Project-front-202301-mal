@@ -4,6 +4,7 @@
   --color-secondary: rgba(60, 60, 59);
   --color-secondary-titles: rgb(39, 39, 39);
   --color-secondary-clear: rgba(222, 222, 212);
+  --color-secondary-clearer: rgb(240, 240, 240);
   --color-tertiary: rgba(255, 122, 61);
   --color-tertiary-disabled: rgb(255, 196, 169);
   --color-tertiary-clear: rgba(255, 122, 61, 0.601);
