@@ -1,3 +1,4 @@
+import { relative } from 'path';
 import React, { FC } from 'react';
 
 interface SquareProps {
