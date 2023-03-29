@@ -66,6 +66,7 @@ export const Header = () => {
           <ul className="header__navbar__links-list">
             <li className="header__navbar__link-item">
               <Link
+                aria-label="home"
                 onClick={() => handleMenuBtnClick()}
                 className="header__navbar__link-text"
                 to={'/'}
@@ -75,6 +76,7 @@ export const Header = () => {
             </li>
             <li className="header__navbar__link-item">
               <Link
+                aria-label="tu-modular"
                 onClick={() => handleMenuBtnClick()}
                 className="header__navbar__link-text"
                 to={'/allcarpets'}
@@ -84,6 +86,7 @@ export const Header = () => {
             </li>
             <li className="header__navbar__link-item">
               <Link
+                aria-label="nosotros"
                 onClick={() => handleMenuBtnClick()}
                 className="header__navbar__link-text"
                 to={'/nosotros'}
@@ -93,6 +96,7 @@ export const Header = () => {
             </li>
             <li className="header__navbar__link-item">
               <Link
+                aria-label="login"
                 onClick={() => handleMenuBtnClick()}
                 className="header__navbar__link-text"
                 to={'/login'}
@@ -102,6 +106,7 @@ export const Header = () => {
             </li>
             <li className="header__navbar__link-item">
               <Link
+                aria-label="register"
                 onClick={() => handleMenuBtnClick()}
                 className="header__navbar__link-text"
                 to={'/register'}
