@@ -20,11 +20,11 @@ export const CustomizeFormStyled = styled.form`
   .create__button {
     background-color: var(--color-tertiary);
     color: white;
-    border: none;
     padding: 4px 50px;
     border-radius: 6px;
     font-size: large;
     border: 2px solid var(--color-tertiary);
+    cursor: pointer;
     :disabled {
       background-color: var(--color-tertiary-disabled);
     }
