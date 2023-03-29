@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const CarpetsStyled = styled.div`
-  background-color: var(--color-secondary-clear);
+  background-color: var(--color-secondary-clearer);
   justify-content: center;
   min-height: 100vh;
   height: 100%;

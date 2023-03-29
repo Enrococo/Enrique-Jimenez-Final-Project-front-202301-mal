@@ -157,7 +157,7 @@ describe('Given a header component', () => {
       </MemoryRouter>
     );
 
-    const createLink = screen.getByRole('tusModular-link');
+    const createLink = screen.getByLabelText('tusModular-link');
 
     await fireEvent.click(createLink);
     expect(true).toBe(true);
