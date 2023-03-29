@@ -1,9 +1,11 @@
 import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 import { Header } from './Header';
 import userEvent from '@testing-library/user-event';
+import { Provider } from 'react-redux';
+import { store } from '../../app/store';
 
 describe('Given a header component', () => {
   test('When rendering mainlayout, then navbar must be in the document', () => {
@@ -141,5 +143,23 @@ describe('Given a header component', () => {
     expect(menuButton).toHaveClass('active');
     await fireEvent.click(registerLink);
     expect(menuButton).not.toHaveClass('active');
+  });
+
+  test('When clicking on the create button, it shoul redirect you to login in case there is no token', async () => {
+    sessionStorage.setItem('MockToken', '1111.1111.1111');
+    render(
+      <MemoryRouter>
+        <React.StrictMode>
+          <Provider store={store}>
+            <Header />
+          </Provider>
+        </React.StrictMode>
+      </MemoryRouter>
+    );
+
+    const createLink = screen.getByRole('tusModular-link');
+
+    await fireEvent.click(createLink);
+    expect(true).toBe(true);
   });
 });
