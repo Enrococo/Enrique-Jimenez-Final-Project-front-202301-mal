@@ -28,6 +28,14 @@ export const HeaderStyled = styled.div`
     gap: 20px;
   }
 
+  .menu__link {
+    font-size: large;
+    text-decoration: none;
+    :hover {
+      text-decoration: underline;
+    }
+  }
+
   ul.menu__container li ul {
     max-width: fit-content;
     max-height: 0;

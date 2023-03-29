@@ -26,7 +26,16 @@ export const Header = () => {
         />
       </Link>
       <ul className="menu__container">
-        <li>Sobre Nosotros</li> <li>Tienda</li>
+        <li>
+          <Link className="menu__link" to={'/nosotros'}>
+            Sobre Nosotros
+          </Link>
+        </li>{' '}
+        <li>
+          <Link className="menu__link" to={'/allcarpets'}>
+            Tus Modular
+          </Link>
+        </li>
         <li className="user">
           <Link to={'#'}>
             <FontAwesomeIcon icon={faUser} />
