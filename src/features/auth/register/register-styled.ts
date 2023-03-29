@@ -27,11 +27,20 @@ export const RegisterStyled = styled.form`
     cursor: pointer;
     :disabled {
       background-color: var(--color-tertiary-disabled);
+      border: 2px solid var(--color-tertiary-disabled);
+      color: white;
+      cursor: default;
     }
     :hover {
       background-color: white;
       color: var(--color-tertiary);
       border: 2px solid var(--color-tertiary);
+    }
+    :hover:disabled {
+      background-color: var(--color-tertiary-disabled);
+      border: 2px solid var(--color-tertiary-disabled);
+      color: white;
+      cursor: default;
     }
   }
 
