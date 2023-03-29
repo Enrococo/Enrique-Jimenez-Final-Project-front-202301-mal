@@ -63,7 +63,7 @@ export const RegisterStyled = styled.form`
   }
   .name_container {
     display: flex;
-    max-width: 85%;
+    width: 100%;
     gap: 10px;
   }
 
@@ -74,7 +74,8 @@ export const RegisterStyled = styled.form`
 
   .form-submit {
     display: flex;
-    width: 85%;
+    width: 100%;
     justify-content: space-between;
+    align-items: center;
   }
 `;

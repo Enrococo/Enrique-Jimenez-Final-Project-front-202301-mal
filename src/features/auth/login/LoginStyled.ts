@@ -71,7 +71,8 @@ export const LoginStyled = styled.form`
 
   .form-submit {
     display: flex;
-    width: 85%;
+    width: 100%;
     justify-content: space-between;
+    align-items: center;
   }
 `;
