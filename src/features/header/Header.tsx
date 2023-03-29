@@ -65,23 +65,48 @@ export const Header = () => {
         <nav className="header__navbar">
           <ul className="header__navbar__links-list">
             <li className="header__navbar__link-item">
-              <Link className="header__navbar__link-text" to={'/'}>
+              <Link
+                onClick={() => handleMenuBtnClick()}
+                className="header__navbar__link-text"
+                to={'/'}
+              >
                 Home
               </Link>
             </li>
             <li className="header__navbar__link-item">
-              <Link className="header__navbar__link-text" to={'/tienda'}>
-                Tienda
+              <Link
+                onClick={() => handleMenuBtnClick()}
+                className="header__navbar__link-text"
+                to={'/allcarpets'}
+              >
+                Tus Modular
               </Link>
             </li>
             <li className="header__navbar__link-item">
-              <Link className="header__navbar__link-text" to={'/nosotros'}>
+              <Link
+                onClick={() => handleMenuBtnClick()}
+                className="header__navbar__link-text"
+                to={'/nosotros'}
+              >
                 Nosotros
               </Link>
             </li>
             <li className="header__navbar__link-item">
-              <Link className="header__navbar__link-text" to={'/login'}>
-                Accede{' '}
+              <Link
+                onClick={() => handleMenuBtnClick()}
+                className="header__navbar__link-text"
+                to={'/login'}
+              >
+                Accede
+              </Link>
+            </li>
+            <li className="header__navbar__link-item">
+              <Link
+                onClick={() => handleMenuBtnClick()}
+                className="header__navbar__link-text"
+                to={'/register'}
+              >
+                Regístrate
               </Link>
             </li>
           </ul>
