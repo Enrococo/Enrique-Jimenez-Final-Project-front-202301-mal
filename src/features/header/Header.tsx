@@ -33,6 +33,7 @@ export const Header = () => {
         </li>{' '}
         <li>
           <Link
+            role="tusModular-link"
             className="menu__link"
             to={sessionStorage.length === 1 ? '/allcarpets' : '/login'}
           >
